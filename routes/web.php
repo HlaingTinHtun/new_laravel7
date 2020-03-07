@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = Http::post('https://jsonplaceholder.typicode.com/posts',[
-        'title'=> 'foo',
-      'body'=> 'bar',
-      'userId'=> 1
-    ]);
+//    $data = Http::post('https://jsonplaceholder.typicode.com/posts',[
+//        'title'=> 'foo',
+//      'body'=> 'bar',
+//      'userId'=> 1
+//    ]);
+//
+//    dd($data->body());
 
-    dd($data->body());
+    echo Str::of('hello_12123213')->before('_12123213');
 });
+
