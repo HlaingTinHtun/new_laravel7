@@ -13,9 +13,10 @@ class NameCast implements CastsAttributes
      */
     public function get($model, string $key, $value, array $attributes)
     {
-        return new Name(
-            $attributes['name']
-        );
+        return new Name($value);
+//        return new Name(
+//            $attributes['name']
+//        );
     }
 
     /**
@@ -23,8 +24,9 @@ class NameCast implements CastsAttributes
      */
     public function set($model, string $key, $value, array $attributes)
     {
-        return [
-            'name' => $value->name
-        ];
+        return $value->name;
+//        return [
+//            'name' => $value->name
+//        ];
     }
 }
