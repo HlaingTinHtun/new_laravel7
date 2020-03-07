@@ -17,9 +17,9 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('user/{user}/receipe/{receipe:name}', function (User $user,Receipe $receipe) {
-
-    dd($receipe);
+//Route::get('user/{user}/receipe/{receipe:name}', function (User $user,Receipe $receipe) {
+//
+//    dd($receipe);
 //    $data = Http::post('https://jsonplaceholder.typicode.com/posts',[
 //        'title'=> 'foo',
 //      'body'=> 'bar',
@@ -30,5 +30,16 @@ Route::get('user/{user}/receipe/{receipe:name}', function (User $user,Receipe $r
 
 //    echo Str::of('hello_12123213')->before('_12123213');
 
-});
+//});
 
+
+//Route::get('/',function(){
+//    $users = User::select([
+//        'users.*'
+//    ])->withCasts([
+//        'name' => \App\Casts\NameCast::class
+//    ])->first();
+//
+//    dd($users->name);
+//
+//});
