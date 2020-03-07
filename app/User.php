@@ -38,4 +38,9 @@ class User extends Authenticatable
         'name' => NameCast::class,
         'email_verified_at' => 'datetime',
     ];
+
+    public function receipes()
+    {
+        return $this->hasMany(Receipe::class,'author_id');
+    }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use App\Receipe;
+use App\User;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -15,7 +17,9 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('/', function () {
+Route::get('user/{user}/receipe/{receipe:name}', function (User $user,Receipe $receipe) {
+
+    dd($receipe);
 //    $data = Http::post('https://jsonplaceholder.typicode.com/posts',[
 //        'title'=> 'foo',
 //      'body'=> 'bar',
@@ -24,6 +28,7 @@ Route::get('/', function () {
 //
 //    dd($data->body());
 
-    echo Str::of('hello_12123213')->before('_12123213');
+//    echo Str::of('hello_12123213')->before('_12123213');
+
 });
 
